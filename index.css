@@ -1,7 +1,14 @@
 #header{
     margin: 0px;
     padding: 0px;
-    background-color: #102027;
+    background-color: #061b24;
+    border-bottom: 2px solid black;
+    box-shadow: 5px 5px 3px 3px #7c8386;
+    margin-bottom: 15px;
+}
+
+body{
+    background-color: #adb1b3;
 }
 
 #header img{
@@ -26,65 +33,172 @@
     margin-left: 10px;
 }
 
+#header nav ul li:hover{
+    background-color: #0c3a4e;
+    border-style: outset;
+    transform: scale(1.05,1.05);
+}
+#inicio {
+    background-image: url(disco2.jpg);
+    background-color: rgba(90, 90, 90, 0.7);
+    background-size: cover;
+    background-blend-mode:multiply;
+    grid-area: inicio;
+    border: 3px solid black;
+    text-align: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 3px 3px #7c8386;
+}
+
+#inicio:hover{
+    background-color: rgba(146, 208, 216, 0.5);
+}
+
+#inicio h1{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 45px;
+}
+
+#inicio h2{
+    font-family: Georgia, serif;
+    font-size: 32px;
+}
+
+#inicio header{
+    vertical-align: center;
+}
 #principal{
     vertical-align: top;
     display: grid;
-    grid-template-areas: "aside inicio aside2"
+    grid-template-areas: "inicio inicio inicio"
                          "aside main aside2";
     grid-template-columns: 1fr 5fr 1fr;
+    row-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    
 }     
 #aside {
-    background-color: #37474f;
+    background-image: linear-gradient(to top,rgb(35, 44, 49) ,rgb(90, 116, 129) );
     grid-area: aside;
+    *color: rgb(212, 220, 224);
     border: 1px solid black;
-    text-align: center;
-
+    min-width: 200px;
 }
+
+#aside h2{
+    font-family: Georgia, serif ;
+    font-size: 32px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#aside ul{
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+#aside ul li a{
+    font-family: "Palatino Linotype";
+    font-size: 22px;
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}
+
 #aside2 {
+    text-align: center;
+    padding: 10px;
     grid-area: aside2;
     border: 1px solid black;
     background-color: #37474f;
 }
+#publicidad img{
+    margin-top: 20px;
+}
+
+#publicidad img:hover{
+    transform: scale(1.1,1.1);
+}
 #main {
     grid-area: main;
     border: 1px solid black;
-    background-color: #62727b;
+    background-color: rgba(98, 114, 123);
+}
+#main h1{
+    text-align: center;
+    font-family: Georgia, serif ;
+    font-size: 34px;
 }
 #main article{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid black;
-    justify-items: center;
-    text-align: center;
+    text-align: left;
+    align-items: center;
 }
 #main article:nth-child(odd) {
-	grid-template-areas: "div img";
+    grid-template-areas: "div img";
+    background-color: rgba(255, 255, 255, 0.4);
+    
 }
 #main article:nth-child(even) {
-	grid-template-areas: "img div";
+    grid-template-areas: "img div";
+    background-color: rgba(255, 255, 255, 0.2);
 }
 #main article div{
     grid-area: div;
+    margin: 10px;
+    border-style: inset;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
-#main img{
-    grid-area: img;
-}
-#inicio {
-    background-color: #37474f;
-    grid-area: inicio;
-    border: 1px solid black;
-    display: grid;
-    grid-template-rows: 1fr 3fr;
-    text-align: center;
-    padding-bottom: 40px;
+#main article div:hover{
+    transform: scale(1.02,1.02);
 }
 
-#carrusel{
-    margin-right: auto;
-    margin-left: auto;
-    width: 60%;
-    border: 1px solid black;
+#main article img:hover{
+    transform: scale(1.02,1.02);
 }
+
+article div p{
+    font-family: "Palatino Linotype";
+    font-size: 18px;
+    border-style: inset;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    margin-top: 0px;
+}
+
+article div h3{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+article div h2{
+    font-family: Georgia, serif ;
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+#main img{
+    margin: 10px;
+    grid-area: img;
+    border-style: solid;
+    align-self: center;
+    justify-self: center;
+}
+
 
 #footer{
     color: white;
@@ -96,7 +210,8 @@
 
 #img{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
