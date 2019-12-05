@@ -137,78 +137,29 @@ body{
     transform: scale(1.1,1.1);
     transition-duration: 2s;
 }
-#main {
-    grid-area: main;
-    border: 1px solid black;
-    background-color: rgba(98, 114, 123);
-}
-#main h1{
-    text-align: center;
-    font-family: Georgia, serif ;
-    font-size: 34px;
-}
-#main article{
+
+#formularioContacto{
+    padding: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-    align-items: center;
-}
-#main article:nth-child(odd) {
-    grid-template-areas: "div img";
-    background-color: rgba(255, 255, 255, 0.4);
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
     
 }
-#main article:nth-child(even) {
-    grid-template-areas: "img div";
-    background-color: rgba(255, 255, 255, 0.2);
-}
-#main article div{
-    grid-area: div;
-    margin: 10px;
-    border-style: inset;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-#main article div:hover{
-    transform: scale(1.02,1.02);
-    transition-duration: 1s;
+
+#input , #required{
+    justify-self: start;
 }
 
-#main article img:hover{
-    transform: scale(1.02,1.02);
-    transition-duration: 1s;
+#input:invalid , #required:invalid{
+    background-color: lightsalmon;
 }
-
-article div p{
-    font-family: "Palatino Linotype";
-    font-size: 18px;
-    border-style: inset;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px;
-    margin-top: 0px;
+#required:valid{
+    background-color: lightgreen;
 }
-
-article div h3{
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 5px;
+#label{
+    justify-self: end;
 }
-
-article div h2{
-    font-family: Georgia, serif ;
-    font-size: 28px;
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-#main img{
-    margin: 10px;
-    grid-area: img;
-    border-style: solid;
-    align-self: center;
-    justify-self: center;
-}
-
 
 #footer{
     color: white;

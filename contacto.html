@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vinil.io</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="contacto.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <ul>
             <li><a href="#">Noticias</a></li>
             <li><a href="#">Artículos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Contacto</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </nav>
@@ -57,29 +57,21 @@
     </section>
      
     <main id="main">
-        <h1>Publicaciones</h1>
-        <article>
-                <div>
-            <h2>El Último Tango | Concierto D’Donnier</h2>
-            <h3>Publicado el 02/12/2019 a las 18:00</h3>
-            <p>Concierto electro-acústico donde D’Donnier repasará canciones de sus trabajos anteriores así como algunas de las nuevas canciones que formará parte de su nuevo trabajo.<br><br>No te lo pierdas, se celebra el día 4 diciembre de 21:00 - 23:00.
-            </p>
-            <a href="">Leer más</a>
-        </div>
-        <img src="article1.jpg" alt="Imagen" height="300px" width="500px">
-        </article>
-
-        <article>
-                <div>
-            <h2>Café Málaga – Live Music | Flamenco Night</h2>
-            <h3>Publicado el 28/11/2019 a las 15:45</h3>
-            <p>Disfruta de un concierto de Miriam Montes el próximo 4 de diciembre en la Calle Málaga de 22:30 a 00:30. <br><br>¡La entrada es gratuita así que no tienes excusa!
-            </p>
-            <a href="">Leer más</a>
-        </div>
-        <img src="article2.jpg" alt="Imagen" height="300px" width="500px">
-        </article>
-
+            <h2>Contacto</h2>
+            <h3>Si quieres contactar conmigo, por favor, rellena el siguiente formulario:</h3>
+            <form id="formulario" action="#">
+                <label for="nombre" id="label">Nombre (*):</label>
+                <input id="nombre" type="text" id="required" placeholder="Nombre" minlength="1" maxlength="200" required />
+                <label for="apellidos" id="label">Apellidos:</label>
+                <input id="apellidos" type="text" id="input" placeholder="Apellidos" minlength="1" maxlength="200" />
+                <label for="telefono" id="label">Teléfono:</label>
+                <input id="telefono" type="number" id="input" placeholder="657012345" pattern="/^[9|6|7][0-9]{8}$/">
+                <label for="email" id="label">E-mail (*):</label>
+                <input id="email" type="email" id="required" placeholder="ejemplo123@gmail.com" required/>
+                <label for="comentario" id="label">Comentario (*):</label>
+                <textarea id="comentario" id="required" rows="10" cols="40" placeholder="Escriba su mensaje" required></textarea>
+                <input type="submit" id="enviar">
+            </form>
     </main>
     <aside id="aside2">
         <section>
